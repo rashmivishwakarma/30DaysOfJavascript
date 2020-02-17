@@ -32,8 +32,7 @@
           id: 213
         }
       ];
-      <h3>Unsorted employee info</h3>;
-      document.write(JSON.stringify(employee));
+      document.write(`<h3>Employee Info</h3> ${JSON.stringify(employee)}`);
 
       for (var i = 0; i < employee.length; i++) {
         for (var j = 0; j < employee.length; j++) {
@@ -45,8 +44,9 @@
         }
       }
 
-      <h3>Sorted employee info</h3>;
-      document.write(JSON.stringify(employee));
+      document.write(
+        ` <h3>Sorted employee info</h3> ${JSON.stringify(employee)}`
+      );
     </script>
   </body>
 </html>
