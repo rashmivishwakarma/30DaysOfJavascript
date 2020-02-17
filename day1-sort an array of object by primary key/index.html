@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sort Array of Object by Primary Key</title>
+  </head>
+  <body>
+    <h3>Sort Array of Object by Primary Key</h3>
+    <script>
+      var employee = [
+        {
+          name: "Mary",
+          Company: "ABC",
+          Age: 24,
+          id: 876
+        },
+        {
+          name: "Ana",
+          Company: "ABC",
+          Age: 34,
+          id: 246
+        },
+        {
+          name: "Jhon",
+          Company: "ABC",
+          Age: 24,
+          id: 985
+        },
+        {
+          name: "Jhon",
+          Company: "ABC",
+          Age: 24,
+          id: 213
+        }
+      ];
+      <h3>Unsorted employee info</h3>;
+      document.write(JSON.stringify(employee));
+
+      for (var i = 0; i < employee.length; i++) {
+        for (var j = 0; j < employee.length; j++) {
+          if (employee[j + 1] && employee[j].id > employee[j + 1].id) {
+            let temp = employee[j];
+            employee[j] = employee[j + 1];
+            employee[j + 1] = temp;
+          }
+        }
+      }
+
+      <h3>Sorted employee info</h3>;
+      document.write(JSON.stringify(employee));
+    </script>
+  </body>
+</html>
