@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>day4 - write a function multiply(2)(3)...()</title>
+  </head>
+  <body>
+    <h3>day4 - write a function multiply(2)(3)...()</h3>
+    <script>
+      function multiply(x) {
+        return function(y) {
+          return y ? multiply(x * y) : x;
+        };
+      }
+
+      console.log(multiply(2)(3)());
+      console.log(multiply(2)(3)(4)());
+      console.log(multiply(2)(3)(4)(5)());
+      console.log(multiply(2)(3)(4)(5)(6)());
+    </script>
+  </body>
+</html>
